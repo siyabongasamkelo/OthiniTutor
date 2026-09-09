@@ -5,7 +5,10 @@ export class StudentRepository {
   /**
    * Registers a brand new student into the system database
    */
-  static async create(studentData: Partial<IStudent>): Promise<IStudent> {
+  static async create(
+    studentData: Partial<IStudent>,
+    options?: { session: any },
+  ): Promise<IStudent> {
     logger.info(
       `✍️ [StudentRepository] Initiating registration for new student: ${studentData.fullName}`,
     );

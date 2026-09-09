@@ -2,7 +2,10 @@ import { Parent, IParent } from "./parents.model.js";
 import { Types } from "mongoose";
 
 export class ParentsRepository {
-  async create(data: Partial<IParent>): Promise<IParent> {
+  async create(
+    data: Partial<IParent>,
+    options?: { session: any },
+  ): Promise<IParent> {
     return await Parent.create(data);
   }
 
