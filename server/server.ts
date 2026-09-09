@@ -4,6 +4,7 @@ import parentRouter from "./features/parents/parents.routes";
 import paymentRouter from "./features/payments/payment.routes";
 import classRouter from "./features/classes/classes.routes";
 import authRouter from "./features/auth/auth.routes";
+import tutorRouter from "./features/tutors/tutors.routes";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use("/api/v1/parents", parentRouter);
 app.use("/api/v1/payments", paymentRouter);
 app.use("/api/v1/classes", classRouter);
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/tutors", tutorRouter);
 
 // Global Error Handler catches all next(error) triggers from controllers perfectly
 // app.use(globalErrorHandler);
